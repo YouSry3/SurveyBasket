@@ -1,6 +1,9 @@
 ﻿global using Microsoft.AspNetCore.Mvc;
 global using Mapster;
 global using MapsterMapper;
+global using FluentValidation;
+global using FluentValidation.AspNetCore;
+
 
 
 global using SurveyBasket.Models;

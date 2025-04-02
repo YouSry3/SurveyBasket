@@ -1,6 +1,8 @@
 ﻿
 
 
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 namespace SurveyBasket.Controllers;
 
 [Route("api/[controller]")]
@@ -50,6 +52,8 @@ public class PollsController(IPollService pollService) : ControllerBase
     [HttpPost("add")]
     public IActionResult Add([FromBody] CreatePollRequest request)
     {
+        
+
                 var newPoll = _pollService.Add(request.Adapt<Poll>());
         
                 return CreatedAtAction(nameof(Get), new { id = newPoll.Id }, newPoll);
