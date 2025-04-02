@@ -1,4 +1,6 @@
 ﻿using SurveyBasket.ValidationAttributes;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace SurveyBasket.Models
 {
@@ -9,7 +11,7 @@ namespace SurveyBasket.Models
         public string MiddileName { get; set; } = string.Empty;
 
         public string LastName { get; set; } = string.Empty;
-        [MinAge(19)]
+        [MinAge(19),DisplayName("Data of Birth")]
 
         public DateTime? DateOfBirth { get; set; }
 
