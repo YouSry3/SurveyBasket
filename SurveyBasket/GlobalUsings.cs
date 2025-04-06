@@ -4,8 +4,7 @@ global using MapsterMapper;
 global using FluentValidation;
 global using FluentValidation.AspNetCore;
 
-
-
+global using SurveyBasket;
 global using SurveyBasket.Models;
 global using SurveyBasket.Services;
 global using SurveyBasket.Contracts;
