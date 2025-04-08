@@ -1,4 +1,7 @@
-﻿using SurveyBasket.Models;
+﻿
+
+using SurveyBasket.Entities;
+using SurveyBasket.Models;
 
 namespace SurveyBasket.Services;
 
@@ -9,7 +12,7 @@ public class PollService : IPollService
         {
             Id = 1,
             Title = "Poll 1",
-            Description = "My first poll"
+            Summary = "My first poll"
         }
     ];
 
@@ -32,7 +35,7 @@ public class PollService : IPollService
             return false;
 
         currentPoll.Title = poll.Title;
-        currentPoll.Description = poll.Description;
+        currentPoll.Summary = poll.Summary;
 
         return true;
     }
@@ -48,4 +51,12 @@ public class PollService : IPollService
 
         return true;
     }
+
+  
+
+   
+
+   
+
+   
 }

@@ -1,7 +1,10 @@
 ﻿
 
 
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+
+using Mapster;
+using SurveyBasket.Models;
 
 namespace SurveyBasket.Controllers;
 
@@ -28,15 +31,15 @@ public class PollsController(IPollService pollService) : ControllerBase
     public IActionResult Get([FromRoute] int id)
     {
             var poll = _pollService.Get(id);
-            if(poll == null)
+            if(poll is  null)
                 return NotFound();
-            
 
-                    // Configration mapping bettween two variable in DTO  
-       
-        
 
-           var response = poll.Adapt<PollResponse>();
+        // Configration mapping bettween two variable in DTO  
+
+
+
+        var response = poll?.Adapt<PollResponse>();
 
 
         return Ok(response); 

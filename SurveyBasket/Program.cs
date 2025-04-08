@@ -1,11 +1,14 @@
 
 
+using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDependencies();
+builder.Services.AddDependencies(builder.Configuration);
+
+
 
 
 var app = builder.Build();
